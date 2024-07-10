@@ -42,13 +42,13 @@ client.$.waitForReady(Date.now() + 5000, async (e) => {
           // fetch casts
           if( cast.data.castAddBody.mentions[0] == FID ){ // check if the cast concern antimofm.eth
 
-            if(cast.data.timestamp > ((Date.now()/1000) -1609459946 - (3600*24) ) ){ // if it's active follow the subscriber whenever he have active mint
+            if(cast.data.timestamp > ((Date.now()/1000) -1609459946 - (3600*24) ) ){ // follow the subscriber as long as he have recent activity with you
               const follow = await makeLinkAdd({ type: "follow", targetFid: cast.data.castAddBody.mentions[1] }, dataOptions, ed25519Signer); // follow the subscriber
               follow.map(async(message)=>{
                   const r = await client.submitMessage(message);
                   console.log(r);
               });
-            }else if(cast.data.timestamp > ((Date.now()/1000) -1609459946 - (3600*24*5) )){ // unfollow the subscriber as he has 5 days without mint
+            }else if(cast.data.timestamp > ((Date.now()/1000) -1609459946 - (3600*24*5) )){ // unfollow the subscriber as he has 5 days without activity
               const follow = await makeLinkRemove({ type: "unfollow", targetFid: cast.data.castAddBody.mentions[1] }, dataOptions, ed25519Signer); // follow the subscriber
               follow.map(async(message)=>{
                   const r = await client.submitMessage(message);

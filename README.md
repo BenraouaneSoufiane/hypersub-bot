@@ -18,7 +18,7 @@ node -r ts-node/register/transpile-only ./src/signer.ts
 ```
 # Runing the bot
 ```
-node -r ts-node/register/transpile-only ./src/index.ts
+node -r ts-node/register/transpile-only ./src/bot.ts
 ```
 You can run it & keep it working even you quit the trminal by using nohup or pm2
 
