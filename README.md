@@ -1,33 +1,29 @@
-# TypedExpress
+# Hypersub farcaster bot
 
-This project shows how to type Express.Request and Express.Response.
+This project allow you to receive notifications about active designer (mints) on your farcaster account, automatically ignore un-active designer
 
-Basically the secret sauce is something like:
-
-```
-import Express from 'express';
-import { Send, Query } from 'express-serve-static-core';
-
-
-export interface TypedRequestBody<T> extends Express.Request {
-    body: T
-}
-
-export interface TypedRequestQuery<T extends Query> extends Express.Request {
-    query: T
-}
-
-export interface TypedRequest<T extends Query, U> extends Express.Request {
-    body: U,
-    query: T
-}
-
-
-export interface TypedResponse<ResBody> extends Express.Response {
-    json: Send<ResBody, this>;
-}
+# Installation
+You'll need to farcaster ID (typiclly to create new user, or add existing) & mnemonic phrase to generate signer to create/submit casts
 
 ```
+git clone https://github.com/BenraouaneSoufiane/hypersub-bot.git
+cd hypersub-bot
+npm install
+```
+
+# Generate signer
+You'll need to signer private key, if you already have a signer priivate key ignore this step & paste it directly to src/bot.ts, this step generate a signer & logs the private key valid for one month
+ ```
+node -r ts-node/register/transpile-only ./src/signer.ts
+```
+# Runing the bot
+```
+node -r ts-node/register/transpile-only ./src/index.ts
+```
+You can run it & keep it works even you quit the trminal by using nohup or pm2
+
+## Creating 
+
 
 Start with one of:
 
