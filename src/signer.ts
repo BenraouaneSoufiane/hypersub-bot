@@ -1,4 +1,4 @@
-import { FarcasterNetwork, keyGatewayABI, KEY_GATEWAY_ADDRESS, CHAIN, ViemLocalEip712Signer } from '@farcaster/hub-nodejs';
+import { keyGatewayABI, KEY_GATEWAY_ADDRESS, CHAIN, ViemLocalEip712Signer } from '@farcaster/hub-nodejs';
 import {ed25519 }from '@noble/curves/ed25519';
 import { toHex, fromHex, createWalletClient, publicActions, http } from 'viem';
 import { optimism } from "viem/chains";
