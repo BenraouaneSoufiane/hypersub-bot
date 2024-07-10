@@ -5,7 +5,7 @@ import { hexToBytes } from "@noble/hashes/utils";
 
 
 const hubRpcEndpoint = "hub-grpc.pinata.cloud";
-const FID = 510172; // of the bot
+const FID = 1234; // of the bot
 const SIGNER = "0x60c68de4a52800830f7e7ae9bde5c0f871bd3eda8733473e7f57998cdb304b42";
 const RFID = 4923; // receiver FID (who will receive bot notifications)
 

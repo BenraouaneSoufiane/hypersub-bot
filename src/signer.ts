@@ -5,8 +5,8 @@ import { optimism } from "viem/chains";
 import { mnemonicToAccount, toAccount } from "viem/accounts";
 
 
-const MNEMONIC = 'diary wagon crush happy tobacco pepper abandon mammal monster mistake adult delay'; // used to generate signer for/of the bot if you don't have
-const fid = 510172; // of the bot
+const MNEMONIC = ''; // used to generate signer for/of the bot if you don't have
+const fid = 1234; // of the bot
 (async()=>{
 const OP_PROVIDER_URL = "https://opt-mainnet.g.alchemy.com/v2/BdptFAC-8nMGC0SjwY38mJ9A_b-A7Enj"; // Alchemy or Infura url
 
