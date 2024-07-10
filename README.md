@@ -20,20 +20,6 @@ node -r ts-node/register/transpile-only ./src/signer.ts
 ```
 node -r ts-node/register/transpile-only ./src/index.ts
 ```
-You can run it & keep it works even you quit the trminal by using nohup or pm2
-
-## Creating 
-
-
-Start with one of:
-
-```text
-nodemon
-F5 in VSCode
-node.exe -r ts-node/register/transpile-only ./src/index.ts
-node.exe -r ts-node/register ./src/index.ts
-```
-
-Check the source code for routes (try `/ping`).
+You can run it & keep it working even you quit the trminal by using nohup or pm2
 
 ## Enjoy :)
